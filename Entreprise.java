@@ -1,25 +1,22 @@
-package ex3;
+package ex5;
 
 public class Entreprise {
 
-	  private BuildVehicule buildVehicule;
-
-	  public void setBuildVehicule(BuildVehicule bv) {
-	   
-	   buildVehicule = bv; 
+	public void afficheDocument(Document document)
+	{
+		document.afficheDocument();
+		
+	}
 	
-		}
-
-	  public Vehicule getVehicule() { 
-	  	return buildVehicule.getVehicule(); 
-	  }
-
-	  public void constructVoiture(String nom) {
-	  	
-		  buildVehicule.creerNouvelleVehicule();
-		  buildVehicule.creeNbroue();
-		  buildVehicule.creeNom(nom);
-		  
-
-	  }
+	public static void main(String[] args) {
+		
+		Entreprise e = new Entreprise();
+		DocumentPDF pdf = new DocumentPDF();
+		DocumentText text = new DocumentText();
+		DocumentHTML html = new DocumentHTML();
+		
+		e.afficheDocument(pdf);
+		e.afficheDocument(text);
+		e.afficheDocument(html);
+	}
 }
